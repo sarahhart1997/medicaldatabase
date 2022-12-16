@@ -70,23 +70,30 @@ public class Staff extends HttpServlet implements Servlet {
                     String sName = rs.getString("Surgeon_Name");
                     String sContract = rs.getString("Surgery_Skills");
                     String sSpecialty = rs.getString("Speciality");
-                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>" + sSpecialty + "</td></tr>");
+                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>"
+                            + sSpecialty + "</td></tr>");
                 }
             else if (lookupStaffType.equals("Clinical_Personnel"))
                 while (rs.next()) {
-                    String sID = rs.getString("SurgeonID");
-                    String sName = rs.getString("Surgeon_Name");
-                    String sContract = rs.getString("Surgery_Skills");
-                    String sSpecialty = rs.getString("Speciality");
-                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>" + sSpecialty + "</td></tr>");
+                    String cpID = rs.getString("EmployeeID");
+                    String cpSSN = rs.getString("SSN");
+                    String cpName = rs.getString("Name");
+                    String cpGender = rs.getString("Gender");
+                    String cpAddress = rs.getString("Address");
+                    String cpSalary = rs.getString("Salary");
+                    String cpPhone = rs.getString("Phone");
+                    out.println("<tr><td>" + cpID + "</td><td>" + cpSSN + "</td><td>" + cpName + "</td><td>"
+                            + cpGender + "</td><td>" +cpAddress + "</td><td>" + cpSalary + "</td><td>" + cpPhone + "</td></tr>");
                 }
             else if (lookupStaffType.equals("Primary_Care_Physician"))
                 while (rs.next()) {
-                    String sID = rs.getString("SurgeonID");
-                    String sName = rs.getString("Surgeon_Name");
-                    String sContract = rs.getString("Surgery_Skills");
-                    String sSpecialty = rs.getString("Speciality");
-                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>" + sSpecialty + "</td></tr>");
+                    String pcID = rs.getString("PhysicianID");
+                    String pcSpecialty = rs.getString("Specialty");
+                    String pcPatientNo = rs.getString("No_Of_Patients");
+                    String pcPatientID = rs.getString("PatientID");
+                    String pcSalary = rs.getString("Salary");
+                    out.println("<tr><td>" + pcID + "</td><td>" + pcSpecialty + "</td><td>" + pcPatientNo + "</td><td>"
+                            + pcPatientID + "</td><td>" + pcSalary + "</td></tr>");
                 }
             else if (lookupStaffType.equals("Surgeon"))
                 while (rs.next()){
@@ -94,7 +101,8 @@ public class Staff extends HttpServlet implements Servlet {
                     String sName = rs.getString("Surgeon_Name");
                     String sContract = rs.getString("Surgery_Skills");
                     String sSpecialty = rs.getString("Speciality");
-                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>" + sSpecialty + "</td></tr>");
+                    out.println("<tr><td>" + sID + "</td><td>" + sName + "</td><td>" + sContract + "</td><td>"
+                            + sSpecialty + "</td></tr>");
                 }
 
             out.println("</table>");

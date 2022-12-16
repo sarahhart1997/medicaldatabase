@@ -46,8 +46,8 @@ input[type=submit] {
       <select name="staff-type">
         <option value = "staff-type"> Staff Type</option>
         <option value = "Nurse" onclick="location.href = '../Staff_Management/CreateNurse.html'">Nurse</option>
-        <option value = "Clinical Personnel" onclick="location.href = '../Staff_Management/CreateCP.html'" selected>Clinical Personnel</option>
-        <option value = "Primary Care Physician" onclick="location.href = '../Staff_Management/CreatePC.html'">Primary Care Physician</option>
+        <option value = "Clinical Personnel" onclick="location.href = '../Staff_Management/CreateCP.html'">Clinical Personnel</option>
+        <option value = "Primary Care Physician" onclick="location.href = '../Staff_Management/CreatePC.html'" selected>Primary Care Physician</option>
         <option value = "Surgeon" onclick="location.href = '../Staff_Management/CreateSurgeon.html'">Surgeon</option>
       </select>
     <br></br>
@@ -56,19 +56,13 @@ input[type=submit] {
 <!--Nurse Creation-->
 <div align="center" style="border:10px solid slateblue; background-color:white">
   <br></br>
-  <label style="color:purple; font-size:21px;"><b>New Nurse Info</b></label>
+  <label style="color:purple; font-size:21px;"><b>New Primary Care Physician Info</b></label>
   <br></br>
-  Personnel Name:&nbsp;<input type="text" name="cpName">&nbsp;
-  SSN:&nbsp;<input type="text" name=cpSSN">&nbsp;
-  <select name="gender-select">
-    <option value = "gender-select" selected> Gender </option>
-    <option value = "Male">Male</option>
-    <option value = "Female">Female</option>
-    <option value = "Non-Binary">Non-Binary</option>
-  </select>
-  Address:&nbsp;<input type="text" name="cpAddress">&nbsp;
+  PC Physician Name:&nbsp;<input type="text" name="pcName">&nbsp;
+  Specialty:&nbsp;<input type="text" name=pcSpecialty">&nbsp;
+  No. of Patients:&nbsp;<input type="text" name="pcNoPatients">&nbsp;
+  Patient ID:&nbsp;<input type="text" name="pcAssignPatients">&nbsp;
   Salary:&nbsp;<input type="text" name="cpSalary">&nbsp;
-  Phone:&nbsp;<input type="text" name="cpPhone">&nbsp;
 
   <br></br>
   <input type="submit" value="Create">

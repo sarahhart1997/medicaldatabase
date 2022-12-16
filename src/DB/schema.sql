@@ -39,17 +39,18 @@ VALUES
 DROP TABLE IF EXISTS `PC_Physician`;
 CREATE TABLE `Newark_Medical`.`PC_Physician` (
   `PhysicianID` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(60) NULL,
   `Specialty` VARCHAR(60) NULL,
   `No_of_Patients` INT NULL,
   `PatientID` INT NULL,
   `Salary` INT NULL,
   PRIMARY KEY (`PhysicianID`));
 
- INSERT INTO `PC_Physician` (`PhysicianID`, `Specialty`, `No_of_Patients`, `PatientID`, `Salary`)
+ INSERT INTO `PC_Physician` (`PhysicianID`, `Name`, `Specialty`, `No_of_Patients`, `PatientID`, `Salary`)
  VALUES
- (1234, 'Cardiology', '3', 1234, '70k'),
- (9876, 'Pediatrics', '2', 2345, '60k'),
- (8765, 'Hospice', '1', 3456, '50k');
+ (1234, 'Rebecca', 'Cardiology', '3', 1234, '70k'),
+ (9876, 'Rachel', 'Pediatrics', '2', 2345, '60k'),
+ (8765, 'Frank', 'Hospice', '1', 3456, '50k');
 
 DROP TABLE IF EXISTS `Nurses`;
 CREATE TABLE `Newark_Medical`.`Nurses` (

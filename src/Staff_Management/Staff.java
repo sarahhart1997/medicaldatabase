@@ -39,7 +39,7 @@ public class Staff extends HttpServlet implements Servlet {
 
 //            stmt.execute(con.getSchema());
 
-// Bulk Staff-Type Lookup
+// Bulk Staff-Type Lookup from dropdown
             lookupStaffType = request.getParameter("lookupStaffType");
             if (lookupStaffType.equals("no_type")) {
                 out.println("<html>\n" + "<head><title>" + title + "</title></head>\n" + "<body bgcolor= \"slateblue\">\n"

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+html{background-color: ivory;}
+
+input[type=submit] {
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  margin: 6px 3px;
+  cursor: pointer;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Newark Medical Association</title>
+</head>
+<body>
+<h2 align="center" style="color:teal"><b>Patient Management Home</b></h2>
+
+<div class="container" align="center">
+  <h1 style="color:blue">Newark Medical Association</h1>
+  <input type="submit" value="Home" onclick="location.href = '../Main_Dashboard/main.html'">
+</div>
+
+<div>
+  <form action="PatientHome" class="form-inline" method="get">
+
+    <div align="center" "formsubmit">
+    <br></br>
+    &nbsp;<input type="radio" name="radio" value = "1" id="New_Patient" onclick="location.href = '../Patient_Management/CreatePatient.html'" checked>
+    &nbsp;Create Patient&nbsp;
+    &nbsp;<input type="radio" name="radio" value = "2" id="Edit_Patient" onclick="location.href = '../Patient_Management/LookupPatient.html'">
+    &nbsp;Lookup Patient&nbsp;
+    &nbsp;<input type="radio" name="radio" value = "3" id="Patient_MedInfo" onclick="location.href = '../Patient_Management/PatientMedInfo.html'">
+    &nbsp;View Medical Information&nbsp;
+    <br></br>
+    <br></br>
+
+    <div align="center" style="border:10px solid slateblue; background-color:white">
+      <br></br>
+      <label style="color:purple; font-size:21px;"><b>Please input the patient's information below</b></label>
+      <br></br>
+      Patient Name:&nbsp;<input type="text" name="Name">&nbsp;
+      <select name="gender-select">
+        <option value = "gender-select" selected> Select Gender</option>
+        <option value = "Male">Male</option>
+        <option value = "Female">Female</option>
+        <option value = "Non-Binary">Non-Binary</option>
+      </select>
+      Social Security Number:&nbsp;<input type="text" name="SSN">
+      Address:&nbsp;<input type="text" name="Address">
+      Phone:&nbsp;<input type="text" name="Phone">
+
+      <br></br>
+      <input type="submit" value="Create">
+    </div>
+  </form>
+
+</div>
+
+</body>
+</html>

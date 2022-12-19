@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+html{background-color: ivory;}
+
+input[type=submit] {
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  margin: 6px 3px;
+  cursor: pointer;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Newark Medical Association</title>
+</head>
+<body>
+<h2 align="center" style="color:teal"><b>Staff Management Home</b></h2>
+
+<div class="container" align="center">
+  <h1 style="color:blue">Newark Medical Association</h1>
+  <input type="submit" value="Home" onclick="location.href = '../Main_Dashboard/main.html'">
+</div>
+
+<div>
+  <form action="Staff" class="form-inline" method="get">
+
+    <div align="center" "formsubmit">
+    <br></br>
+    <label style="color:purple; font-size:21px;"><b>What staff changes are you making?</b></label>
+    <br></br>
+    &nbsp;<input type="radio" name="radio" value = "1" id="New_Staff" onclick="location.href = '../Staff_Management/CreateStaff.html'" checked>
+    &nbsp;Create Staff
+    &nbsp;<input type="radio" name="radio" value = "2" id="Lookup_Staff" onclick="location.href = '../Staff_Management/LookupStaff.html'">
+    &nbsp;Lookup Staff
+    &nbsp;<input type="radio" name="radio" value = "3" id="Job_Shift" onclick="location.href = '../Staff_Management/.html'">
+    &nbsp;Schedule Job Shift
+    <br></br>
+    <br></br>
+</div>
+
+    <div align="center" style="border:10px solid slateblue; background-color:white">
+      <br></br>
+      <label style="color:purple; font-size:21px;"><b>Select Staff Type</b></label>
+      <br></br>
+      <select name="staff-type">
+        <option value = "staff-type" selected> Staff Type</option>
+        <option value = "Nurse" onselect="location.href = '../Staff_Management/CreateNurse.html'">Nurse</option>
+        <option value = "Clinical Personnel" onselect="location.href = '../Staff_Management/CreateCP.html'">Clinical Personnel</option>
+        <option value = "Primary Care Physician" onclick="location.href = '../Staff_Management/CreatePC.html'">Primary Care Physician</option>
+        <option value = "Surgeon" onclick="location.href = '../Staff_Management/CreateSurgeon.html'">Surgeon</option>
+      </select>
+      <br></br>
+      <input type="submit" value="Next">
+    <br></br>
+    </div>
+
+<!--Ask Specific Questions based on drop down selection-->
+  </form>
+
+
+</div>
+
+</body>
+</html>

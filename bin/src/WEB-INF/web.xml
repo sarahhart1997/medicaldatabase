@@ -1,0 +1,11 @@
+<web-app>
+    <servlet>
+        <servlet-name> Staff </servlet-name>
+        <servlet-class> Staff </servlet-class>
+    </servlet>
+
+<servlet-mapping>
+    <servlet-name> Staff </servlet-name>
+    <url-pattern> /Staff </url-pattern>
+</servlet-mapping>
+</web-app>

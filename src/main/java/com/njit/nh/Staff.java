@@ -1,4 +1,4 @@
-package Staff_Management;
+package main.java.com.njit.nh;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,7 +16,10 @@ public class Staff extends HttpServlet implements Servlet {
     public Staff() {
         super();
     }
-
+    private String messages;
+    public void init() throws ServletException{
+        messages = "The HttpServlet Class Demo";
+    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
 
@@ -109,7 +112,10 @@ public class Staff extends HttpServlet implements Servlet {
             out.println("</html></body>");
 
             stmt.close();
-
-            String surgeon = request.getParameter("courseid");
-            String semester = request.getParameter("semester");
-            String course_name = rs.getString("courseName");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}

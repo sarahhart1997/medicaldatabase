@@ -1,16 +1,17 @@
 <?php
 include "../functions.php";
 
+ini_set("display_errors", TRUE);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql_find_names = "SELECT patient_name, patient_id FROM patient_personal_data ORDER BY patient_name";
+$sql_find_names = "SELECT Name, PatientID FROM Patient_Info ORDER BY Name";
 
 $all_patients = mysqli_query($conn,$sql_find_names);
 
-$sql_find_physicians = "SELECT employee_name, physician_id FROM physicians WHERE position <> 'chief_of_staff' ORDER BY employee_name";
+$sql_find_physicians = "SELECT Name, PhysicianID FROM PC_Physician ORDER BY Name";
 
 $all_physicians = mysqli_query($conn,$sql_find_physicians);
 

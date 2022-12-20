@@ -9,11 +9,11 @@ import javax.servlet.http.*;
 import java.sql.*;
 
 @WebServlet("/Staff")
-public class Staff extends HttpServlet implements Servlet {
+public class StaffLookup extends HttpServlet implements Servlet {
 
     private static final long serialVersionUID = 1L;
 
-    public Staff() {
+    public StaffLookup() {
         super();
     }
     private String messages;

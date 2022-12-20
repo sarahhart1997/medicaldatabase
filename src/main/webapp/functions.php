@@ -13,11 +13,10 @@ if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
     echo 'Phew we have it!';
 }
 // Check connection
+$conn = new \MySQLi($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-
-$conn = new \MySQLi($servername, $username, $password, $dbname);
 ?>
 

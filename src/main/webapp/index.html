@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html{background-color: ivory;}
+
+        input[type=submit] {
+            background-color: teal;
+            border: none;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            margin: 6px 3px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Newark Medical Association</title>
+</head>
+<body>
+<h2 align="center" style="color:teal"><b>Welcome to our database management system</b></h2>
+
+<div class="container">
+    <h1 align="center" style="color:blue">Newark Medical Association</h1>
+
+    <form class="form-inline" method="get">
+
+        <div align="center" style="border:10px solid slateblue; background-color:white" "formsubmit">
+        <br></br>
+        <label style="color:purple; font-size:21px;"><b>Please Select One for the Next Step!</b></label>
+        <br></br>
+        &nbsp;<input type="radio" name="radio" value = "1" id="PatientHome" onclick="location.href = 'Main_Dashboard/PatientHome.html'">&nbsp;Patient Management&nbsp;
+        &nbsp;<input type="radio" name="radio" value = "2" id="StaffHome" onclick="location.href = 'Main_Dashboard/StaffHome.html'">&nbsp;Staff Management&nbsp;
+        &nbsp;<input type="radio" name="radio" value = "3" id="InPatientHome" onclick="location.href = 'Main_Dashboard/InPatientHome.html'">&nbsp;In-Patient Management&nbsp;
+        <br></br>
+        <br></br>
+    </form>
+</div>
+
+</div>
+</body>
+</html>

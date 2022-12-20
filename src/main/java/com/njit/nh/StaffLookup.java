@@ -36,7 +36,7 @@ public class StaffLookup extends HttpServlet implements Servlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Newark_Medical?user=root&password=hskid1");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8080/Newark_Medical?user=root&password=hskid1");
 
             Statement stmt = con.createStatement();
 

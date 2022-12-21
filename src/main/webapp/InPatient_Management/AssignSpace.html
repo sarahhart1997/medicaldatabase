@@ -32,18 +32,15 @@
 <div>
     <form action="InPatientHome" class="form-inline" method="get">
 
-        <div align="center" style="border:10px solid slateblue; background-color:white">
-            <br></br>
-            <label style="color:purple; font-size:21px;"><b>What would you like to do to the patient
-                database?</b></label>
+        <div align="center">
             <br></br>
 
             &nbsp;<input type="radio" name="radio" value="1" id="CheckBeds"
                          onclick="location.href = '../InPatient_Management/CheckBeds.html'">
             Check Available Beds
 
-            &nbsp;<input type="radio" name="radio" value="2" id="AssignBed"
-                         onclick="location.href = '../InPatient_Management/AssignSpace.html'">
+            &nbsp;<input type="radio" name="radio" value="2" id="AssignSpace"
+                         onclick="location.href = '../InPatient_Management/AssignSpace.html'" checked>
             &nbsp;<b>Space</b> Assign/Remove&nbsp;
 
             &nbsp;<input type="radio" name="radio" value="3" id="AssignNurse"
@@ -64,6 +61,37 @@
             <br></br>
         </form>
 
+<!--    Operational Form-->
+    <div align="center" style="border:10px solid slateblue; background-color:white">
+        <br>
+        <label style="color: purple"><b>Assign Patient to a Room and Bed</b></label>
+        <br>
+
+        <br>
+        Patient:&nbsp
+        <select name="PatienttoSpace">
+            <option value ="PatienttoSpace" selected>Patient Name</option>
+        </select>
+
+        <br>
+        <br>
+        Assign Room:&nbsp
+        <select name="AvailableRooms">
+            <option value = "AvailableRooms" selected> Available Room</option>
+        </select>
+        <br>
+        <br>
+
+        Assign Bed:&nbsp;
+        <select name="AvailableBed">
+            <option value = "AvailableBed" selected> Available Bed</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="submit" value="Assign Space to Patient">
+        <br></br>
+    </div>
 
 </div>
 

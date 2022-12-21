@@ -32,14 +32,11 @@
 <div>
     <form action="InPatientHome" class="form-inline" method="get">
 
-        <div align="center" style="border:10px solid slateblue; background-color:white">
-            <br></br>
-            <label style="color:purple; font-size:21px;"><b>What would you like to do to the patient
-                database?</b></label>
+        <div align="center">
             <br></br>
 
             &nbsp;<input type="radio" name="radio" value="1" id="CheckBeds"
-                         onclick="location.href = '../InPatient_Management/CheckBeds.html'">
+                         onclick="location.href = '../InPatient_Management/CheckBeds.html'" checked>
             Check Available Beds
 
             &nbsp;<input type="radio" name="radio" value="2" id="AssignBed"
@@ -64,6 +61,12 @@
             <br></br>
         </form>
 
+<!--    Operational Form-->
+    <div align="center" style="border:10px solid slateblue; background-color:white">
+        <br>
+        PHP View Which Renders the Available Beds Here.....
+        <br>
+    </div>
 
 </div>
 

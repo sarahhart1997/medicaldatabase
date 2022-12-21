@@ -46,20 +46,36 @@ input[type=submit] {
 
     <div align="center" style="border:10px solid slateblue; background-color:white">
       <br></br>
-      <label style="color:purple; font-size:21px;"><b>Search for Staff</b></label>
+      <label style="color:purple; font-size:21px;"><b>Schedule a Job Shift</b></label>
       <br></br>
-      Employee Name:&nbsp;<input type="text" name="Name">&nbsp;
-      <select name="lookupStaffType">
-        <option value = "lookupStaffType" selected> Staff Type</option>
-        <option value = "Nurse">Nurse</option>
-        <option value = "Clinical_Personnel">Clinical Personnel</option>
-        <option value = "Primary_Care_Physician">Primary Care Physician</option>
-        <option value = "Surgeon">Surgeon</option>
+      <br>
+      Shift from This Employee:&nbsp
+      <select name="FromEmployee">
+        <option value = "FromEmployee" selected> Employee 1</option>
       </select>
+      <br>
+      <br>
+
+      To This Employee:&nbsp;
+      <select name="ToEmployee">
+        <option value = "ToEmployee" selected> Employee 2</option>
+      </select>
+      <br>
+      <br>
+
+      Patient to be Transferred &nbsp;
+      <select name="PatientTransferred">
+        <option value = "PatientTransferred" selected> Patient 1 </option>
+      </select>
+      <br>
+      <br>
+
+      <p> Time of Transfer:&nbsp;
+      <input type="time" name="transfer_time" id="transfer_time">
+      </p>
+
+      <input type="submit" value="Schedule Transfer">
       <br></br>
-      </form>
-      <input type="submit" value="Search" onclick="location.href = '../LookupResults.html'">
-    <br></br>
     </div>
 
 

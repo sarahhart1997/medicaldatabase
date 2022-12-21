@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            background-color: ivory;
+        }
+
+        input[type=submit] {
+            background-color: teal;
+            border: none;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            margin: 6px 3px;
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Newark Medical Association</title>
+</head>
+<body>
+<h2 align="center" style="color:teal"><b>In-Patient Management Home</b></h2>
+
+<div class="container" align="center">
+    <h1 style="color:blue">Newark Medical Association</h1>
+    <input type="submit" value="Home" onclick="location.href = '../index.html'">
+</div>
+
+<div>
+    <form action="InPatientHome" class="form-inline" method="get">
+
+        <div align="center">
+            <br></br>
+
+            &nbsp;<input type="radio" name="radio" value="1" id="CheckBeds"
+                         onclick="location.href = '../InPatient_Management/CheckBeds.html'">
+            Check Available Beds
+
+            &nbsp;<input type="radio" name="radio" value="2" id="AssignSpace"
+                         onclick="location.href = '../InPatient_Management/AssignSpace.html'">
+            &nbsp;<b>Space</b> Assign/Remove&nbsp;
+
+            &nbsp;<input type="radio" name="radio" value="3" id="AssignNurse"
+                         onclick="location.href = '../InPatient_Management/AssignNurse.html'">
+            <b>Nurse</b> Assign/Remove&nbsp;
+
+
+            <input type="radio" name="radio" value="4" id="AssignSurgeon"
+                   onclick="location.href = '../InPatient_Management/AssignSurgeon.html'">
+            &nbsp;<b>Surgeon</b> Assign/Remove&nbsp;
+
+            <input type="radio" name="radio" value = "5" id="BookSurgery" onclick="location.href = '../InPatient_Management/BookSurgery.html'" checked>
+            &nbsp;Book a Surgery&nbsp;
+
+            <input type="radio" name="radio" value = "6" id="SurgerySchedule" onclick="location.href = '../InPatient_Management/SurgerySchedule.html'">
+            &nbsp;View Surgery Schedule&nbsp;
+            <br></br>
+            <br></br>
+        </form>
+
+<!--    Operational Form-->
+    <div align="center" style="border:10px solid slateblue; background-color:white">
+        <br>
+        <label style="color: purple"><b>Book a Surgery</b></label>
+        <br>
+
+        <br>
+        Patient:&nbsp
+        <select name="PatienttoSpace">
+            <option value ="PatienttoSpace" selected>Patient Name</option>
+        </select>
+
+        <br>
+        <br>
+        Assign Surgery Room:&nbsp
+        <select name="AvailableSurgeryRooms">
+            <option value = "AvailableSurgeryRooms" selected> Available Surgery Room</option>
+        </select>
+        <br>
+        <br>
+
+        Surgery Type:&nbsp;
+        <select name="SurgeryType">
+            <option value = "SurgeryType" selected> Type of Surgery</option>
+        </select>
+        <br>
+        <p>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required>
+        </p>
+        <p>
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="time" required>
+        </p>
+
+        <input type="submit" value="Search for Available Staff">
+        <br></br>
+    </div>
+
+</div>
+
+</body>
+</html>

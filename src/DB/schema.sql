@@ -7,13 +7,13 @@ DROP TABLE IF EXISTS `Patient_Info`;
 CREATE TABLE `Newark_Medical`.`Patient_Info` (
   `PatientID` INT NOT NULL AUTO_INCREMENT,
   `SSN` INT NULL,
-  `Name` VARCHAR(45) NULL,
+  `PatientName` VARCHAR(45) NULL,
   `Gender` VARCHAR(45) NULL,
   `Address` VARCHAR(250) NULL,
   `Phone` VARCHAR(55) NULL,
   PRIMARY KEY (`PatientID`));
 
-INSERT INTO `Patient_Info` (`PatientID`, `SSN`, `Name`, `Gender`, `Address`, `Phone`)
+INSERT INTO `Patient_Info` (`PatientID`, `SSN`, `PatientName`, `Gender`, `Address`, `Phone`)
 VALUES
 (1234, 112211, 'Jill', 'Female', '1234 Jane Road', '828-989-7049'),
 (2345, 223322, 'Adam', 'Male', '345 Rector Street', '305-713-3662'),
@@ -23,14 +23,14 @@ DROP TABLE IF EXISTS `Clinical_Personnel`;
 CREATE TABLE `Newark_Medical`.`Clinical_Personnel` (
   `EmployeeID` INT NOT NULL AUTO_INCREMENT,
   `SSN` INT NULL,
-  `Name` VARCHAR(45) NULL,
+  `CP_Name` VARCHAR(45) NULL,
   `Gender` VARCHAR(45) NULL,
   `Address` VARCHAR(250) NULL,
   `Salary` INT NULL,
   `Phone` VARCHAR(55) NULL,
   PRIMARY KEY (`EmployeeID`));
 
-INSERT INTO `Clinical_Personnel` (`EmployeeID`, `SSN`, `Name`, `Gender`, `Address`, `Salary`, `Phone`)
+INSERT INTO `Clinical_Personnel` (`EmployeeID`, `SSN`, `CP_Name`, `Gender`, `Address`, `Salary`, `Phone`)
 VALUES
 (1234, 43215432, 'Grace', 'Female', '115 Matthew Drive', '40k', '305-713-4562'),
 (2345, 54326543, 'Rohan', 'Male', '16 6th Street', '60k', '904-713-3662'),
@@ -39,14 +39,14 @@ VALUES
 DROP TABLE IF EXISTS `PC_Physician`;
 CREATE TABLE `Newark_Medical`.`PC_Physician` (
   `PhysicianID` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(60) NULL,
+  `Phy_Name` VARCHAR(60) NULL,
   `Specialty` VARCHAR(60) NULL,
   `No_of_Patients` INT NULL,
   `PatientID` INT NULL,
   `Salary` INT NULL,
   PRIMARY KEY (`PhysicianID`));
 
- INSERT INTO `PC_Physician` (`PhysicianID`, `Name`, `Specialty`, `No_of_Patients`, `PatientID`, `Salary`)
+ INSERT INTO `PC_Physician` (`PhysicianID`, `Phy_Name`, `Specialty`, `No_of_Patients`, `PatientID`, `Salary`)
  VALUES
  (1234, 'Rebecca', 'Cardiology', '3', 1234, '70k'),
  (9876, 'Rachel', 'Pediatrics', '2', 2345, '60k'),

@@ -47,22 +47,49 @@ input[type=submit] {
         <!-- If lookup page can edit, delete and view medical info that would be ideal. -->
         <div align="center" style="border:10px solid slateblue; background-color:white">
             <br></br>
-            <label style="color:purple; font-size:21px;"><b>Search for Patients by following options</b></label>
-            <br></br>
-            Patient Name:&nbsp;<input type="text" name="Name">&nbsp;
-            Patient ID:&nbsp;<input type="text" name="ID">&nbsp;
-            <select name="gender-select">
-                <option value = "gender-select" selected> Select Gender</option>
-                <option value = "Male">Male</option>
-                <option value = "Female">Female</option>
-                <option value = "Non-Binary">Non-Binary</option>
+            <label style="color:purple; font-size:21px;"><b>View Appointments By</b></label>
+            <br>
+            <form action="ViewAllConsultations" method="post">
+                <input type="submit" name="button" value="All Appointments">
+                <br>
+            </form>
+            <br>
+            <form action="viewappbypatient">
+            <label style="color:purple"><b>Select a Patient</b></label>
+            <br>
+            <select name="view_consultations_per_patient">
+                <option>PatientID</option>
+                <option>Patient Name</option>
             </select>
-            Phone:&nbsp;<input type="text" name="Phone">&nbsp;
+            <br>
+                <input type="submit" name="button" value="By Patient">
+            </form>
+            <br>
+            <br>
+            <form action="viewappbydate">
+                <label style="color:purple"><b>Select a Date</b></label>
+                <br>
+                <p>
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date" required>
+                </p>
+                <input type="submit" name="button" value="By Date">
+            </form>
+            <br>
+            <br>
+            <form action="viewappbyphysician">
+                <label style="color:purple"><b>Select a Physician</b></label>
+                <br>
+                <select name="viewbyphysician">
+                    <option>PhysicianID</option>
+                    <option>Physician Name</option>
+                </select>
+                <br>
+                <input type="submit" name="button" value="By Physician">
+            </form>
 
             <br></br>
-            <input type="submit" value="Search">
         </div>
-    </form>
 
 </div>
 
